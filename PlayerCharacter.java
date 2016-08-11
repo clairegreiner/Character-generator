@@ -3,145 +3,152 @@ package com.objectDesign;
 import java.util.Scanner;
 
 public class PlayerCharacter {
-	
-	
 
-	public static void main(String[] args) 
-	{
-		System.out.println("Welcome to the RPG Character Genrator. Please enter the following:");
-		Scanner sc = new Scanner(System.in );  //type player name
-		String playerName = null;
-		playerName=sc.nextLine();
-		public PlayerCharacter(String playerName, String greeting, String characterName) {
-			super();
-			this.playerName = playerName;
-			this.greeting = greeting;
-			this.characterName = characterName;
-		
-
-
-		}
-		Scanner userAtbats = new Scanner(System.in);
-		String stringUserAtBats = userAtBats1.nextLine();
-		// TODO Auto-generated method stub
-
-		
-		
-	}
-	}
-
-
-	
+	public String playerClass = null;
+	public String race = null;
 	public String greeting = null;
 	public String characterName = null;
-	public int Strength = 0;
-	public int Dexterity = 0;
+	public int strength = 0;
+	public int dexterity = 0;
+	public int charisma = 0;
+	public int wisdom = 0;
+	public int constitution = 0;
+	public int intelligence = 0;
+	public int experiencePoints = 0;
+	public int level = 0;
+	public String playerName;
+
+
+	public PlayerCharacter(String playerName,  String characterName, 
+			int strength, int dexterity, int constitution, int intelligence, int charisma, 
+			int wisdom, int experiencePoints, int level, String playerClass, String race) {
+												
+		this.playerName = playerName;
+		this.greeting = greeting;				//merged constructor
+		this.characterName = characterName;
+		this.strength = strength;
+		this.dexterity = dexterity;
+		this.constitution = constitution;
+		this.intelligence = intelligence;
+		this.charisma = charisma;
+		this.wisdom = wisdom;
+		this.experiencePoints = experiencePoints;
+		this.level = level;
+		this.playerClass = playerClass;
+		this.race = race;
+	}
+	// TODO Auto-generated method stub
+
 	public int getStrength() {
-		return Strength;
+		return strength;
 	}
+
 	public void setStrength(int strength) {
-		Strength = strength;
+		this.strength = strength;
 	}
+
 	public int getDexterity() {
-		return Dexterity;
+		return dexterity;
 	}
+
 	public void setDexterity(int dexterity) {
-		Dexterity = dexterity;
+		this.dexterity = dexterity;
 	}
+
 	public int getConstitution() {
-		return Constitution;
+		return constitution;
 	}
+
 	public void setConstitution(int constitution) {
-		Constitution = constitution;
+		this.constitution = constitution;
 	}
+
 	public int getIntelligence() {
-		return Intelligence;
+		return intelligence;
 	}
+
 	public void setIntelligence(int intelligence) {
-		Intelligence = intelligence;
+		this.intelligence = intelligence;
 	}
+
 	public int getCharisma() {
-		return Charisma;
+		return charisma;
 	}
+
 	public void setCharisma(int charisma) {
-		Charisma = charisma;
+		this.charisma = charisma;
 	}
+
 	public int getWisdom() {
-		return Wisdom;
+		return wisdom;
 	}
+
 	public void setWisdom(int wisdom) {
-		Wisdom = wisdom;
+		this.wisdom = wisdom;
 	}
+
 	public int getExperiencePoints() {
-		return ExperiencePoints;
+		return experiencePoints;
 	}
+
 	public void setExperiencePoints(int experiencePoints) {
-		ExperiencePoints = experiencePoints;
+		this.experiencePoints = experiencePoints;
 	}
+
 	public int getLevel() {
-		return Level;
+		return level;
 	}
+
 	public void setLevel(int level) {
-		Level = level;
+		this.level = level;
 	}
+
 	public String getPlayerClass() {
 		return playerClass;
 	}
+
 	public void setPlayerClass(String playerClass) {
 		this.playerClass = playerClass;
 	}
+
 	public String getRace() {
-		return Race;
+		return race;
 	}
+
 	public void setRace(String race) {
-		Race = race;
+		this.race = race;
 	}
 
-
-	public int Constitution = 0;
-	public int Intelligence = 0;
-	public PlayerCharacter(int strength, int dexterity, int constitution, int intelligence, int charisma, int wisdom,
-			int experiencePoints, int level, String playerClass, String race) {
-		super();
-		Strength = strength;
-		Dexterity = dexterity;
-		Constitution = constitution;
-		Intelligence = intelligence;
-		Charisma = charisma;
-		Wisdom = wisdom;
-		ExperiencePoints = experiencePoints;
-		Level = level;
-		this.playerClass = playerClass;
-		Race = race;
-		
-	}
-
-
-	public int Charisma = 0;
-	public int Wisdom = 0;
-	public int ExperiencePoints = 0;
-	public int Level = 0;
-	public String playerClass = null;
-	public String Race = null;
 	public String getPlayerName() {
 		return playerName;
 	}
+
 	public void setPlayerName(String playerName) {
 		this.playerName = playerName;
 	}
+
 	public String getGreeting() {
 		return greeting;
 	}
+
 	public void setGreeting(String greeting) {
 		this.greeting = greeting;
 	}
+
 	public String getCharacterName() {
 		return characterName;
 	}
+
 	public void setCharacterName(String characterName) {
 		this.characterName = characterName;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		return "PlayerCharacter [playerClass=" + playerClass + ", race=" + race + ", greeting=" + greeting
+				+ ", characterName=" + characterName + ", strength=" + strength + ", dexterity=" + dexterity
+				+ ", charisma=" + charisma + ", wisdom=" + wisdom + ", constitution=" + constitution + ", intelligence="
+				+ intelligence + ", experiencePoints=" + experiencePoints + ", level=" + level + ", playerName="
+				+ playerName + "]";
+	}
 }
